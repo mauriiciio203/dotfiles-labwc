@@ -1,25 +1,22 @@
 #!/bin/sh
 
-export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
-if [ -f "$HOME/.cache/wal/current_wallpaper" ]; then
-else
-fi
-
-# Iniciar sesión D-Bus si no existe y levantar PipeWire limpio
+# Iniciar sesión D-Bus si no existe
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
-  eval $(dbus-launch --sh-syntax)
+    eval $(dbus-launch --sh-syntax)
 fi
 
-killall -9 pipewire wireplumber pipewire-pulse 2>/dev/null
-sleep 0.5
-
+# Iniciar servidor de audio PipeWire en orden
 pipewire >/dev/null 2>&1 &
 sleep 1
 wireplumber >/dev/null 2>&1 &
 pipewire-pulse >/dev/null 2>&1 &
 
-/usr/libexec/xdg-desktop-portal-wlr &
-/usr/libexec/xdg-desktop-portal -r &
-wal -R -n -q &
-swaybg -i "/home/eniplax/Pictures/Wallpapers/the-new-york-public-library-hnm512DP-MY-unsplash.jpg" -m fill &
+# Portales para captura de pantalla (OBS)
+/usr/libexec/xdg-desktop-portal-wlr >/dev/null 2>&1 &
+/usr/libexec/xdg-desktop-portal -r >/dev/null 2>&1 &
+
+# Restaurar tema Pywal y fondo de pantalla
+wal -R -n -q 2>/dev/null || true
+swaybg -i "/home/eniplax/Pictures/Wallpapers/europeana-SMMPyqhvRUY-unsplash.jpg" -m fill >/dev/null 2>&1 &
