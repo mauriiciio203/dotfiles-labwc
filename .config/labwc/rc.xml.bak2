@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <core>
+    <gap>4</gap>
+  </core>
+
+  <keyboard>
+    <default />
+
+    <!-- Mitad Izquierda (Super + Flecha Izquierda) -->
+    <keybind key="W-Left">
+      <action name="Unmaximize" />
+      <action name="MoveTo" x="0" y="0" />
+      <action name="ResizeTo" width="50%" height="100%" />
+    </keybind>
+
+    <!-- Mitad Derecha (Super + Flecha Derecha) -->
+    <keybind key="W-Right">
+      <action name="Unmaximize" />
+      <action name="MoveTo" x="50%" y="0" />
+      <action name="ResizeTo" width="50%" height="100%" />
+    </keybind>
+
+    <!-- Mitad Superior (Super + Flecha Arriba) -->
+    <keybind key="W-Up">
+      <action name="Unmaximize" />
+      <action name="MoveTo" x="0" y="0" />
+      <action name="ResizeTo" width="100%" height="50%" />
+    </keybind>
+
+    <!-- Mitad Inferior (Super + Flecha Abajo) -->
+    <keybind key="W-Down">
+      <action name="Unmaximize" />
+      <action name="MoveTo" x="0" y="50%" />
+      <action name="ResizeTo" width="100%" height="50%" />
+    </keybind>
+
+    <!-- Maximizar / Restaurar (Super + F) -->
+    <keybind key="W-f">
+      <action name="ToggleMaximize" />
+    </keybind>
+  </keyboard>
+</labwc_config>

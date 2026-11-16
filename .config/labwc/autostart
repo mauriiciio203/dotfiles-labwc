@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ -f "$HOME/.cache/wal/current_wallpaper" ]; then
+fi
+wal -R -n -q &
+swaybg -i "/home/eniplax/Pictures/Wallpapers/the-new-york-public-library-aai7AgjLM3g-unsplash.jpg" -m fill &

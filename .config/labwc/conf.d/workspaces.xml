@@ -1,0 +1,20 @@
+<labwc_config>
+  <desktops number="4" popupTime="0">
+    <names>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+    </names>
+  </desktops>
+  <keyboard>
+    <keybind key="W-1"><action name="GoToDesktop" to="1" /></keybind>
+    <keybind key="W-2"><action name="GoToDesktop" to="2" /></keybind>
+    <keybind key="W-3"><action name="GoToDesktop" to="3" /></keybind>
+    <keybind key="W-4"><action name="GoToDesktop" to="4" /></keybind>
+    <keybind key="W-S-1"><action name="SendToDesktop" to="1" follow="yes" /></keybind>
+    <keybind key="W-S-2"><action name="SendToDesktop" to="2" follow="yes" /></keybind>
+    <keybind key="W-S-3"><action name="SendToDesktop" to="3" follow="yes" /></keybind>
+    <keybind key="W-S-4"><action name="SendToDesktop" to="4" follow="yes" /></keybind>
+  </keyboard>
+</labwc_config>

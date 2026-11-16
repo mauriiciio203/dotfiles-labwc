@@ -1,0 +1,13 @@
+<labwc_config>
+  <core>
+    <gap>4</gap>
+    <resizeBorder>0</resizeBorder>
+  </core>
+  <theme>
+    <name>sin-bordes</name>
+    <cornerRadius>0</cornerRadius>
+  </theme>
+  <windowRules>
+    <windowRule identifier="*" serverDecoration="no" />
+  </windowRules>
+</labwc_config>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <core>
+    <gap>24</gap>
+    <resizeBorder>0</resizeBorder>
+  </core>
+
+  <focus>
+    <followMouse>yes</followMouse>
+    <raiseOnFocus>yes</raiseOnFocus>
+  </focus>
+
+  <desktops number="4" popupTime="0">
+    <names>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+    </names>
+  </desktops>
+
+  <theme>
+    <name>sin-bordes</name>
+    <cornerRadius>0</cornerRadius>
+  </theme>
+
+  <windowRules>
+    <windowRule identifier="*" serverDecoration="no" />
+  </windowRules>
+
+  <keyboard>
+    <default />
+
+    <!-- Cerrar ventana con Super + Q -->
+    <keybind key="W-q">
+      <action name="Close" />
+    </keybind>
+
+    <!-- Acoplar a la Izquierda con Super + Flecha Izquierda -->
+    <keybind key="W-Left">
+      <action name="Unmaximize" />
+      <action name="SnapToEdge" direction="left" />
+    </keybind>
+
+    <!-- Acoplar a la Derecha con Super + Flecha Derecha -->
+    <keybind key="W-Right">
+      <action name="Unmaximize" />
+      <action name="SnapToEdge" direction="right" />
+    </keybind>
+
+    <!-- Lanzar terminal Foot con Super + Enter -->
+    <keybind key="W-Return">
+      <action name="Execute" command="foot" />
+    </keybind>
+
+    <!-- Lanzar Fuzzel con Super + D -->
+    <keybind key="W-d">
+      <action name="Execute" command="fuzzel" />
+    </keybind>
+
+    <!-- Lanzar selector de wallpapers dentro de Foot con Super + W -->
+    <keybind key="W-w">
+      <action name="Execute" command="foot -e sh /home/eniplax/.config/labwc/wallpaper-selector.sh" />
+    </keybind>
+
+    <!-- Cambiar entre Workspaces con Super + 1, 2, 3, 4 -->
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1" />
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2" />
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3" />
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4" />
+    </keybind>
+
+    <!-- Cambiar entre Workspaces con Super + Ctrl + Flechas -->
+    <keybind key="W-C-Left">
+      <action name="GoToDesktop" to="left" wrap="yes" />
+    </keybind>
+    <keybind key="W-C-Right">
+      <action name="GoToDesktop" to="right" wrap="yes" />
+    </keybind>
+      <!-- Abrir gestor de Wi-Fi nmtui con Super + N -->
+    <keybind key="W-n">
+      <action name="Execute" command="foot -e nmtui" />
+    </keybind>
+  </keyboard>
+</labwc_config>
