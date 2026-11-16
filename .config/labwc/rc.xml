@@ -91,5 +91,17 @@
 <keybind key="W-n">
   <action name="Execute" command="foot -e nmtui" />
 </keybind>
+<keybind key="W-m">
+  <action name="Execute" command="/home/eniplax/.config/labwc/power-menu.sh" />
+</keybind>
+<keybind key="XF86AudioRaiseVolume">
+  <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+</keybind>
+<keybind key="XF86AudioLowerVolume">
+  <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+</keybind>
+<keybind key="XF86AudioMute">
+  <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+</keybind>
   </keyboard>
 </labwc_config>

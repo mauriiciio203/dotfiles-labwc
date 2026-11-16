@@ -28,3 +28,4 @@ if [ -n "$seleccion" ]; then
     echo "swaybg -i \"$ruta_completa\" -m fill &" >> "$HOME/.config/labwc/autostart"
 fi
 labwc --reconfigure
+labwc --reconfigure

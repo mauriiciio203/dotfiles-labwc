@@ -1,5 +1,25 @@
 #!/bin/sh
+
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
 if [ -f "$HOME/.cache/wal/current_wallpaper" ]; then
+else
 fi
+
+# Iniciar sesión D-Bus si no existe y levantar PipeWire limpio
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+  eval $(dbus-launch --sh-syntax)
+fi
+
+killall -9 pipewire wireplumber pipewire-pulse 2>/dev/null
+sleep 0.5
+
+pipewire >/dev/null 2>&1 &
+sleep 1
+wireplumber >/dev/null 2>&1 &
+pipewire-pulse >/dev/null 2>&1 &
+
+/usr/libexec/xdg-desktop-portal-wlr &
+/usr/libexec/xdg-desktop-portal -r &
 wal -R -n -q &
-swaybg -i "/home/eniplax/Pictures/Wallpapers/the-new-york-public-library-aai7AgjLM3g-unsplash.jpg" -m fill &
+swaybg -i "/home/eniplax/Pictures/Wallpapers/the-new-york-public-library-hnm512DP-MY-unsplash.jpg" -m fill &

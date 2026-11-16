@@ -1,0 +1,10 @@
+menu.border.width: 3
+menu.border.color: {color4}
+menu.items.bg.color: {background}
+menu.items.text.color: {foreground}
+menu.items.active.bg.color: {color4}
+menu.items.active.text.color: {background}
+menu.items.padding.x: 12
+menu.items.padding.y: 6
+menu.separator.width: 1
+menu.separator.color: {color8}

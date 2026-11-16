@@ -1,8 +1,8 @@
 #!/bin/sh
-opcion=$(printf "Apagar\nReiniciar\nCerrar sesión" | fuzzel --dmenu -p "Sistema: ")
+seleccionada=$(printf "Apagar\nReiniciar\nCerrar sesión" | fuzzel --dmenu -p "Sistema: ")
 
-case "$opcion" in
-    "Apagar") doas poweroff ;;
-    "Reiniciar") doas reboot ;;
+case "$seleccionada" in
+    "Apagar") doas poweroff || sudo poweroff ;;
+    "Reiniciar") doas reboot || sudo reboot ;;
     "Cerrar sesión") labwc --exit ;;
 esac
