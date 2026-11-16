@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "==> Instalando configuraciones de Labwc..."
+echo "==> Instalando configuraciones definitivas de Labwc..."
 
 mkdir -p ~/.config/labwc
 mkdir -p ~/.config/foot
@@ -10,9 +10,6 @@ mkdir -p ~/Pictures/Wallpapers
 
 if [ -f "dotfiles-labwc.tar.gz" ]; then
     tar -xzvf dotfiles-labwc.tar.gz -C ~/
-    echo "==> Archivos extraídos correctamente."
-elif [ -f "dotfiles-labwc" ]; then
-    tar -xzvf dotfiles-labwc -C ~/
     echo "==> Archivos extraídos correctamente."
 else
     echo "[!] No se encontró el paquete de respaldo en este directorio."
