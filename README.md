@@ -23,7 +23,7 @@ doas apk update
 doas apk add labwc swaybg fuzzel foot fastfetch git curl
 
 # 1. Clona el repositorio en tu equipo
-git clone [https://github.com/mauriiciio203/dotfiles-labwc.git](https://github.com/mauriiciio203/dotfiles-labwc.git)
+git clone https://github.com/mauriiciio203/dotfiles-labwc.git
 cd dotfiles-labwc
 
 # 2. Dale permisos de ejecución al script instalador
