@@ -15,8 +15,7 @@ elif [ -f "dotfiles-labwc" ]; then
     tar -xzvf dotfiles-labwc -C ~/
     echo "==> Archivos extraídos correctamente."
 else
-    echo "[!] No se encontró el paquete de respaldo en este directorio (copiando configuración directa)."
-    # Si tienes la carpeta .config/labwc localmente, puedes copiarla o asegurarte de los permisos
+    echo "[!] No se encontró el paquete de respaldo en este directorio."
 fi
 
 [ -f ~/.config/labwc/wallpaper-selector.sh ] && chmod +x ~/.config/labwc/wallpaper-selector.sh
