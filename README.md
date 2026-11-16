@@ -35,3 +35,13 @@ chmod +x install.sh
 IMPORTANTE AL FINAL UTILIZA ESTE COMANDO PARA REINICIAR RODA LA CONFIGURACION DE LABWC
 
 labwc --reconfigure
+
+## ⌨️ Uso y Atajos de Teclado (Keybindings)
+
+| Atajo | Acción |
+| :--- | :--- |
+| `Super` + `D` | Abre el lanzador de aplicaciones **Fuzzel**. |
+| `Super` + `W` | Lanza el selector dinámico de fondos de pantalla. |
+| `Super` + `M` | Abre el **Menú de Energía**. |
+| `Super` + `N` | Abre el gestor de red (`nmtui`). |
+| `Super` + `Enter` | Abre la terminal **Foot**. |
