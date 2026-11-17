@@ -1,0 +1,18 @@
+border.width: 1
+padding.width: 4
+window.handle.width: 4
+osd.border.width: 1
+
+# Borde del menú más grueso y combinado con el fondo
+menu.border.width: 3
+menu.border.color: #70935D
+
+window.active.title.bg.color: #1a1518
+window.active.label.text.color: #c5c4c5
+window.inactive.title.bg.color: #1a1518
+window.inactive.label.text.color: #725d67
+
+menu.items.bg.color: #1a1518
+menu.items.text.color: #c5c4c5
+menu.items.active.bg.color: #70935D
+menu.items.active.text.color: #1a1518
