@@ -1,4 +1,4 @@
-# Labwc Dotfiles (Alpine Linux)
+# Poemwc Alpine linux dotfiles y "o cualquier otra distro"
 
 Configuración ligera y minimalista basada en el compositor **Labwc** para Wayland, diseñada específicamente para entornos en **Alpine Linux**, optimizada con `fuzzel`, `foot`, `swaybg` y tematización limpia sin bordes.
 
