@@ -24,4 +24,18 @@ ln -sf ~/.cache/wal/labwc-themerc ~/.local/share/themes/sin-bordes/openbox-3/the
 [ -f ~/.config/labwc/power-menu.sh ] && chmod +x ~/.config/labwc/power-menu.sh
 [ -f ~/.config/labwc/screenshot-menu.sh ] && chmod +x ~/.config/labwc/screenshot-menu.sh
 
+# Configurar permisos de apagado/reinicio sin contraseña si no hay loginctl
+if ! command -v loginctl >/dev/null 2>&1; then
+    echo "===> Configurando permisos de apagado/reinicio para el menú de energía..."
+    POWEROFF_BIN=$(command -v poweroff || echo "/sbin/poweroff")
+    REBOOT_BIN=$(command -v reboot || echo "/sbin/reboot")
+    if command -v sudo >/dev/null 2>&1; then
+        echo "$USER ALL=(ALL) NOPASSWD: $POWEROFF_BIN, $REBOOT_BIN" | sudo tee /etc/sudoers.d/labwc-power >/dev/null
+        sudo chmod 0440 /etc/sudoers.d/labwc-power
+    elif command -v doas >/dev/null 2>&1; then
+        echo "permit nopass $USER cmd $POWEROFF_BIN" | doas tee -a /etc/doas.conf >/dev/null
+        echo "permit nopass $USER cmd $REBOOT_BIN" | doas tee -a /etc/doas.conf >/dev/null
+    fi
+fi
+
 echo "===> ¡Instalación completa! Ejecuta 'labwc --reconfigure'."
